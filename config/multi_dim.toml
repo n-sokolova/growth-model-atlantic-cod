@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2021 Alfred Wegener Institute Helmholtz Centre for Polar and Marine Research (AWI)
+# SPDX-License-Identifier: CC0-1.0
+
+[model_settings]
+model = "multi_dim"
+
+# Define coordinates (longitudes, latitudes) of your region
+# These coordinates will be used for extracting input temperature data from netcdf file and saving output weight-at-age data to netcdf
+lat = [  47.25,  47.75,  48.25,  48.75, 49.25, 49.75, 50.25, 50.75, 51.25, 51.75]
+lon = [ -11.75, -11.25, -10.75, -10.25, -9.75, -9.25, -8.75, -8.25, -7.75, -7.25, -6.75,
+         -6.25,  -5.75,  -5.25, -4.75, -4.25, -3.75, -3.25, -2.75, -2.25, -1.75, -1.25]
+# Define depth levels (should be the same as in your netcdf file)
+depth = [ 30, 40, 50, 60, 70, 80, 90, 100,
+           115, 135, 160, 190, 230, 280, 340, 410, 490, 580 ]
+
+# Number of years in one life cycle of an individual
+max_age = 5
+
+# Input dataset parameters
+# Range of years in the input temperature dataset
+# Initial year should be one year less than starting year in the dataset
+input_data = "./input_data/"
+first_year = 1980
+final_year = 1989
+
+# Referenced output folders
+exp_name = "SODA"
+region = "CelticSea"

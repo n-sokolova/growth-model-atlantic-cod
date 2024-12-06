@@ -1,0 +1,74 @@
+# SPDX-FileCopyrightText: 2021 Alfred Wegener Institute Helmholtz Centre for Polar and Marine Research (AWI)
+# SPDX-License-Identifier: CC0-1.0
+
+[build-system]
+requires = ["setuptools>=65.5.1", "setuptools_scm[toml]>=6.2", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "growth_model"
+dynamic = ["version"]
+authors = [
+    { name = "Nadezhda Valerievna Sokolova", email = "nadezhda.sokolova@awi.de" },
+]
+description = """\
+              Atlantic cod growth model is a physiology-related growth model that simulates size- and \
+              temperature-dependent growth of Atlantic cod\
+              """
+readme = "README.md"
+dependencies = [
+    "xarray>=2024,<2025",
+    "tomli>=2,<3",
+    "netCDF4>=1,<2",
+    "dask>=2024,<2025",
+    "numpy>=2",
+]
+requires-python = ">=3.9"
+license = { file = "LICENSE.md" }
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Utilities",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Natural Language :: English",
+    "Operating System :: MacOS",
+    "Operating System :: Unix",
+]
+keywords = [
+    "Atlantic cod",
+    "growth model",
+    "physiology-related growth model",
+    "size-dependent growth",
+    "temperature-dependent growth",
+]
+
+[project.scripts]
+cod-growth-model = "growth_model.__main__:main"
+
+[project.urls]
+"Homepage" = "https://codebase.helmholtz.cloud/awi_paleodyn/growth-model-atlantic-cod"
+"Bug Tracker" = "hhttps://codebase.helmholtz.cloud/awi_paleodyn/growth-model-atlantic-cod/-/issues"
+
+[tool.setuptools.packages.find]
+include = ["growth_model*"]
+exclude = [
+    "docs*",
+    "tests*",
+    "examples*",
+    ".env",
+    ".venv",
+    "dist",
+    "build",
+    "Growth-Model-Website",
+]
+
+[tool.setuptools_scm]
+write_to = "growth_model/_version.py"
+version_scheme = "guess-next-dev"
+local_scheme = "no-local-version"

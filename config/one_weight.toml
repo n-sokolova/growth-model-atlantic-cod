@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2021 Alfred Wegener Institute Helmholtz Centre for Polar and Marine Research (AWI)
+# SPDX-License-Identifier: CC0-1.0
+
+[model_settings]
+model = "one_weight"
+temp = [ 10, 15, 20 ]
+weight = 1000
