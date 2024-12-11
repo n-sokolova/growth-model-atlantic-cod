@@ -80,7 +80,7 @@ The following examples assume that the toml files are available on the file
 system. This can be achieved by cloning the repository as follows:
 
 ```bash
-git clone git@codebase.helmholtz.cloud:awi_paleodyn/growth-model-atlantic-cod.git
+git clone git@github.com:n-sokolova/growth-model-atlantic-cod.git
 ```
 
 **base model**
