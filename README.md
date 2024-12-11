@@ -42,7 +42,7 @@ virtual environment:
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-pip install git+https://codebase.helmholtz.cloud/awi_paleodyn/growth-model-atlantic-cod.git@2.0.0
+pip install git+https://github.com/n-sokolova/growth-model-atlantic-cod.git
 ```
 
 After installing the project as described, the `cod-growth-model` command is
